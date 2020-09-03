@@ -50,7 +50,7 @@ $(function () {
         })
     })
     //监听登录表单的提交事件
-    $("#form_login").submit(function(e){
+    $("#form_login").submit(function (e) {
         e.preventDefault()
         $.ajax({
             method: "POST",
@@ -63,7 +63,7 @@ $(function () {
                 }
                 layer.msg(res.message)
                 // console.log(res.token)
-                localStorage.setItem('koken',res.token)
+                localStorage.setItem('token', res.token)
                 location.href = '/index.html'
             }
         })
